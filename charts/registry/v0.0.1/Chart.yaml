@@ -1,0 +1,19 @@
+name: registry
+version: 0.0.1
+appVersion: 0.0.1
+description: JHipster Registry
+keywords:
+- jhipster
+- registry
+- spring
+- cloud
+- config
+- eureka
+home: 
+icon: https://upload.wikimedia.org/wikipedia/commons/5/56/JHipster-logo.png
+sources:
+- https://github.com/jhipster/jhipster-registry
+maintainers:
+- name: Pedro Frazão
+  email: pedro.frazao@basis.com.br
+

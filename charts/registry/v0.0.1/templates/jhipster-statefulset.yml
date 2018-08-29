@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Values.jhipster.name }}
+  labels:
+    app: {{ template "registry.name" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  serviceName: {{ template "registry.name" . }}
+  replicas: {{ .Values.jhipster.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "registry.name" . }}
+      version: "1.0"
+  template:
+    metadata:
+      labels:
+        app: {{ template "registry.name" . }}
+        version: "1.0"
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: {{ template "registry.name" . }}
+        image: {{ .Values.jhipster.registry.image }}
+        ports:
+        - containerPort: {{ .Values.jhipster.port }}
+        env:
+        - name: SPRING_SECURITY_USER_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: registry-secret
+              key: registry-admin-password
+        - name: K8S_CONFIG_PATH
+          value: '/central-config/'
+        volumeMounts:
+        - name: config-volume
+          mountPath: /central-config
+      volumes:
+      - name: config-volume
+        configMap:
+          name: application-config
