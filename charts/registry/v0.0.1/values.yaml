@@ -17,29 +17,29 @@ configmap:
   name: jhipster-registry
   application:
     spring:
-      profiles-active: prod,swagger,k8s
+      profilesactive: prod,swagger,k8s
     eureka:
       client:
-        initial-instance-info-replication-interval-seconds: 15
-        instance-info-replication-interval-seconds: 15
-        registry-fetch-interval-seconds: 15
-        fetch-registry: true
-        register-with-eureka: true
-        eureka-service-url-poll-interval-seconds: 15
+        initialinstanceinforeplicationintervalseconds: 15
+        instanceinforeplicationintervalseconds: 15
+        registryfetchintervalseconds: 15
+        fetchregistry: true
+        registerwitheureka: true
+        eurekaserviceurlpollintervalseconds: 15
       server:
-        peer-eureka-nodes-update-interval-ms: 15000
-        renewal-threshold-update-interval-ms: 15000
-        peer-node-connect-timeout-ms: 2000
-        enable-self-preservation: false
-        registry-sync-retries: 3
-        composite-0-type: native
-        composite-0-search-locations: file:./central-config
+        peereurekanodesupdateintervalms: 15000
+        renewalthresholdupdateintervalms: 15000
+        peernodeconnecttimeoutms: 2000
+        enableselfpreservation: false
+        registrysyncretries: 3
+        composite0type: native
+        composite0searchlocations: file:./central-config
       instance:
-        lease-renewal-interval-in-seconds: 15
-        lease-expiration-duration-in-seconds: 30
-        registry-default-open-for-traffic-count: 0    
+        leaserenewalintervalinseconds: 15
+        leaseexpirationdurationinseconds: 30
+        registrydefaultopenfortrafficcount: 0    
     jhipster:
-      security-authentication-jwt-secret: change_it #IUydTY4W2Sis95MDwe10BK4GvrRTVHpumdQPZYt229zn1PEh24HL7xWq6sk6tg7t6NZz35oEH0t8h0UhA3JDNEn81o896X7O
+      securityauthenticationjwtsecret: change_it #IUydTY4W2Sis95MDwe10BK4GvrRTVHpumdQPZYt229zn1PEh24HL7xWq6sk6tg7t6NZz35oEH0t8h0UhA3JDNEn81o896X7O
   jhipster:
     eureka:
       client:

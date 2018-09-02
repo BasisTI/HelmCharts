@@ -11,33 +11,33 @@ data:
       status: Connected to the JHipster Registry running in Kubernetes
     spring:
       profiles:
-        active: {{ .Values.configmap.aplication.spring.profiles-active }}  
+        active: {{ .Values.configmap.aplication.spring.profilesactive }}  
     eureka:
       client:
-        initial-instance-info-replication-interval-seconds: {{ .Values.configmap.aplication.eureka.client.initial-instance-info-replication-interval-seconds }}
-        instance-info-replication-interval-seconds: {{ .Values.configmap.aplication.eureka.client.instance-info-replication-interval-seconds }}
-        registry-fetch-interval-seconds: {{ .Values.configmap.aplication.eureka.client.registry-fetch-interval-seconds }}
-        fetch-registry: {{ .Values.configmap.aplication.eureka.client.fetch-registry }}
-        register-with-eureka: {{ .Values.configmap.aplication.eureka.client.register-with-eureka }}
-        eureka-service-url-poll-interval-seconds: {{ .Values.configmap.aplication.eureka.client.eureka-service-url-poll-interval-seconds }}
+        initial-instance-info-replication-interval-seconds: {{ .Values.configmap.aplication.eureka.client.initialinstanceinforeplicationintervalseconds }}
+        instance-info-replication-interval-seconds: {{ .Values.configmap.aplication.eureka.client.instanceinforeplicationintervalseconds }}
+        registry-fetch-interval-seconds: {{ .Values.configmap.aplication.eureka.client.registryfetchintervalseconds }}
+        fetch-registry: {{ .Values.configmap.aplication.eureka.client.fetchregistry }}
+        register-with-eureka: {{ .Values.configmap.aplication.eureka.client.registerwitheureka }}
+        eureka-service-url-poll-interval-seconds: {{ .Values.configmap.aplication.eureka.client.eurekaserviceurlpollintervalseconds }}
       server:
-        peer-eureka-nodes-update-interval-ms: {{ .Values.configmap.aplication.eureka.server.peer-eureka-nodes-update-interval-ms }}
-        renewal-threshold-update-interval-ms: {{ .Values.configmap.aplication.eureka.server.renewal-threshold-update-interval-ms }}
-        peer-node-connect-timeout-ms: {{ .Values.configmap.aplication.eureka.server.peer-node-connect-timeout-ms }}
-        enable-self-preservation: {{ .Values.configmap.aplication.eureka.server.enable-self-preservation }}
-        registry-sync-retries: {{ .Values.configmap.aplication.eureka.server.registry-sync-retries }}
+        peer-eureka-nodes-update-interval-ms: {{ .Values.configmap.aplication.eureka.server.peereurekanodesupdateintervalms }}
+        renewal-threshold-update-interval-ms: {{ .Values.configmap.aplication.eureka.server.renewalthresholdupdateintervalms }}
+        peer-node-connect-timeout-ms: {{ .Values.configmap.aplication.eureka.server.peernodeconnecttimeoutms }}
+        enable-self-preservation: {{ .Values.configmap.aplication.eureka.server.enableselfpreservation }}
+        registry-sync-retries: {{ .Values.configmap.aplication.eureka.server.registrysyncretries }}
         composite[0]:
-          type: {{ .Values.configmap.aplication.eureka.server.composite-0-type }}
-          search-locations: {{ .Values.configmap.aplication.eureka.server.search-locations }}
+          type: {{ .Values.configmap.aplication.eureka.server.composite0type }}
+          search-locations: {{ .Values.configmap.aplication.eureka.server.searchlocations }}
       instance:
-        lease-renewal-interval-in-seconds: {{ .Values.configmap.aplication.eureka.instance.lease-renewal-interval-in-seconds }}
-        lease-expiration-duration-in-seconds: {{ .Values.configmap.aplication.eureka.instance.lease-expiration-duration-in-seconds }}
-        registry-default-open-for-traffic-count: {{ .Values.configmap.aplication.eureka.instance.registry-default-open-for-traffic-count }}
+        lease-renewal-interval-in-seconds: {{ .Values.configmap.aplication.eureka.instance.leaserenewalintervalinseconds }}
+        lease-expiration-duration-in-seconds: {{ .Values.configmap.aplication.eureka.instance.leaseexpirationdurationinseconds }}
+        registry-default-open-for-traffic-count: {{ .Values.configmap.aplication.eureka.instance.registrydefaultopenfortrafficcount }}
     jhipster:
       security:
         authentication:
           jwt:
-            secret: {{ .Values.configmap.aplication.jhipster.security-authentication-jwt-secret }}
+            secret: {{ .Values.configmap.aplication.jhipster.securityauthenticationjwtsecret }}
   # app specific configuration
   jhipster-registry.yml: |-
     eureka:
