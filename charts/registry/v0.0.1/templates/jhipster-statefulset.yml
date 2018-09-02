@@ -23,7 +23,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: {{ template "registry.name" . }}
-        image: {{ .Values.jhipster.registry.image }}
+        image: {{ .Values.jhipster.image }}
         ports:
         - containerPort: {{ .Values.jhipster.port }}
         env:
