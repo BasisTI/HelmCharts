@@ -43,4 +43,4 @@ data:
     eureka:
       client:
         service-url:
-          defaultZone: {{ .Values.configmap.jhipster.eureka.client.service-url.defaultZone }}
+          defaultZone: {{ .Values.configmap.jhipster.eureka.client.serviceurl.defaultZone }}

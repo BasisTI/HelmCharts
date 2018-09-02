@@ -43,5 +43,5 @@ configmap:
   jhipster:
     eureka:
       client:
-        service-url:
+        serviceurl:
           defaultZone: http://admin:${spring.security.user.password}@jhipster-registry-0.jhipster-registry.discovery.svc.cluster.local:8761/eureka/,http://admin:${spring.security.user.password}@jhipster-registry-1.jhipster-registry.discovery.svc.cluster.local:8761/eureka/     
