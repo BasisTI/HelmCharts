@@ -11,7 +11,7 @@ data:
       status: Connected to the JHipster Registry running in Kubernetes
     spring:
       profiles:
-        active: prod,swagger,k8s #{{ .Values.configmap.application.spring.profilesActive }}
+        active: prod,swagger,k8s
     eureka:
       client:
         initial-instance-info-replication-interval-seconds: {{ .Values.configmap.application.eureka.client.initialInstanceInfoReplicationIntervalSeconds }}
