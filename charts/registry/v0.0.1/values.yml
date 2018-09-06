@@ -40,7 +40,7 @@ configmap:
         enableSelfPreservation: false
         registrySyncRetries: 3
         composite0Type: native
-        composite0SearchLocations: file:./central-config
+        composite0SearchLocations: file:/central-config
       instance:
         leaseRenewalIntervalInSeconds: 15
         leaseExpirationDurationInSeconds: 30
