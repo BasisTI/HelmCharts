@@ -13,6 +13,13 @@ service:
   name: jhipster-registry
   port: 8761
 
+ingress:
+  name: jhipster-registry
+  host: jhipster-registry.basis.com.br
+  path: /
+  serviceName: jhipster-registry
+  servicePort: 8761
+
 configmap:
   name: jhipster-registry
   application:
@@ -44,4 +51,4 @@ configmap:
     eureka:
       client:
         serviceurl:
-          defaultZone: http://admin:${spring.security.user.password}@jhipster-registry-0.jhipster-registry.discovery.svc.cluster.local:8761/eureka/,http://admin:${spring.security.user.password}@jhipster-registry-1.jhipster-registry.discovery.svc.cluster.local:8761/eureka/     
+          defaultZone: http://admin:${spring.security.user.password}@jhipster-registry.discovery:8761/eureka/ #http://admin:${spring.security.user.password}@jhipster-registry-0.jhipster-registry.discovery.svc.cluster.local:8761/eureka/,http://admin:${spring.security.user.password}@jhipster-registry-1.jhipster-registry.discovery.svc.cluster.local:8761/eureka/     

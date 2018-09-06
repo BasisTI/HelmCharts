@@ -27,6 +27,11 @@ Parameter | Descrption  | Default
 `jhipster.image` | Name of the JHipster Registry Image | `jhipster/jhipster-registry:v4.0.0`
 `service.name` | Name of the Kubernetes Service | `jhipster-registry`
 `service.port` | Kubernetes Service Port | `8761`
+`ingress.name` | Name of the Kubernetes Name | `jhipster-registry`
+`ingress.host` | Name of the JHipster External DNS | `jhipster-registry.basis.com.br`
+`ingress.path` | Path of the URL | `/`
+`ingress.serviceName` | Name of the service that the ingress points to | `jhipster-registry`
+`ingress.servicePort` | Port number that the ingress points to | `8761`
 `configmap.name` | Name of the Kubernetes ConfigMap | `jhipster-registry`
 `configmap.application.spring.profilesActive` | Profiles to be activated in JHipster | `prod,swagger,k8s`
 `configmap.application.eureka.client.initialInstanceInfoReplicationIntervalSeconds` | How long to replicate instance info to the eureka server | `15`
