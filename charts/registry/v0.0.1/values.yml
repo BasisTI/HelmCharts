@@ -44,7 +44,7 @@ configmap:
       instance:
         leaseRenewalIntervalInSeconds: 15
         leaseExpirationDurationInSeconds: 30
-        registryDefaultOpenForTrafficCount: 0    
+        registryDefaultOpenForTrafficCount: 0
     jhipster:
       securityAuthenticationJWTSecret: change_it #IUydTY4W2Sis95MDwe10BK4GvrRTVHpumdQPZYt229zn1PEh24HL7xWq6sk6tg7t6NZz35oEH0t8h0UhA3JDNEn81o896X7O
   jhipster:
