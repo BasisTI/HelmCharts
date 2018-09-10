@@ -1,31 +1,31 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ .Values.jhipster.name }}
+  name: "{{ .Values.jhipster.name }}"
   labels:
-    app: {{ template "registry.name" . }}
+    app: "{{ template "registry.name" . }}"
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
-  serviceName: {{ template "registry.name" . }}
-  replicas: {{ .Values.jhipster.replicaCount }}
+  serviceName: "{{ template "registry.name" . }}"
+  replicas: "{{ .Values.jhipster.replicaCount }}"
   selector:
     matchLabels:
-      app: {{ template "registry.name" . }}
+      app: "{{ template "registry.name" . }}"
       version: "1.0"
   template:
     metadata:
       labels:
-        app: {{ template "registry.name" . }}
+        app: "{{ template "registry.name" . }}"
         version: "1.0"
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-      - name: {{ template "registry.name" . }}
-        image: {{ .Values.jhipster.image }}
+      - name: "{{ template "registry.name" . }}"
+        image: "{{ .Values.jhipster.image }}"
         ports:
-        - containerPort: {{ .Values.jhipster.port }}
+        - containerPort: "{{ .Values.jhipster.port }}"
         env:
         - name: SPRING_SECURITY_USER_PASSWORD
           valueFrom:

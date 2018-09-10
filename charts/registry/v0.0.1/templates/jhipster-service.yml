@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.service.name }}
+  name: "{{ .Values.service.name }}"
   labels:
-    app: {{ template "registry.name" . }}
+    app: "{{ template "registry.name" . }}"
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
@@ -11,8 +11,8 @@ metadata:
     service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
 spec:
   ports:
-  - port: {{ .Values.service.port }}
+  - port: "{{ .Values.service.port }}"
     name: http
   clusterIP: None
   selector:
-    app: {{ template "registry.name" . }}
+    app: "{{ template "registry.name" . }}"
