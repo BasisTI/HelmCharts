@@ -1,7 +1,7 @@
 secret:
   name: registry-secret
   auth:
-    registryAdminPassword: UmVnMjAxOEJBU0lT # base64 encoded = Reg2018BASIS"
+    registryAdminPassword: Reg2018BASIS  # base64 encoded = UmVnMjAxOEJBU0lT"
 
 jhipster:
   name: jhipster-registry
