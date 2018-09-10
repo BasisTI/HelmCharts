@@ -30,7 +30,7 @@ questions:
   label: Imagem do JHipster
   type: string
 #### JWT
-- variable: configmap.application.jhipster
+- variable: configmap.application.jhipster.securityAuthenticationJWTSecret
   group: Configurações adicionais
   default: "change_it"
   description: "Insira um token JWT (kubedns)"
