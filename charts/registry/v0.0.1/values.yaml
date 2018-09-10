@@ -41,6 +41,7 @@ configmap:
         registrySyncRetries: 3
         composite0Type: native
         composite0SearchLocations: file:./central-config
+        peerNodeReadTimeoutMs: 600
       instance:
         leaseRenewalIntervalInSeconds: 15
         leaseExpirationDurationInSeconds: 30

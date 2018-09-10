@@ -26,6 +26,7 @@ data:
         peer-node-connect-timeout-ms: {{ .Values.configmap.application.eureka.server.peerNodeConnectTimeoutMs }}
         enable-self-preservation: {{ .Values.configmap.application.eureka.server.enableSelfPreservation }}
         registry-sync-retries: {{ .Values.configmap.application.eureka.server.registrySyncRetries }}
+        peer-node-read-timeout-ms: {{ .Values.configmap.application.eureka.server.peerNodeReadTimeoutMs }}
         composite[0]:
           type: {{ .Values.configmap.application.eureka.server.composite0type }}
           search-locations: {{ .Values.configmap.application.eureka.server.composite0SearchLocations }}

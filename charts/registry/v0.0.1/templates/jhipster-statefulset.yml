@@ -34,6 +34,12 @@ spec:
               key: registry-admin-password
         - name: K8S_CONFIG_PATH
           value: '/central-config/'
+        - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE
+          value: native
+        - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS
+          value: file:./central-config
+        - name: SPRING_PROFILES_ACTIVE
+          value: prod,k8s,swagger
         volumeMounts:
         - name: config-volume
           mountPath: /central-config
