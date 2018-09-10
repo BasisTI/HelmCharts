@@ -44,11 +44,11 @@ configmap:
       instance:
         leaseRenewalIntervalInSeconds: 15
         leaseExpirationDurationInSeconds: 30
-        registryDefaultOpenForTrafficCount: 0    
+        registryDefaultOpenForTrafficCount: 0
     jhipster:
-      securityAuthenticationJWTSecret: change_it #IUydTY4W2Sis95MDwe10BK4GvrRTVHpumdQPZYt229zn1PEh24HL7xWq6sk6tg7t6NZz35oEH0t8h0UhA3JDNEn81o896X7O
+      securityAuthenticationJWTSecret: change_it
   jhipster:
     eureka:
       client:
         serviceurl:
-          defaultZone: http://admin:${spring.security.user.password}@jhipster-registry.discovery:8761/eureka/ #http://admin:${spring.security.user.password}@jhipster-registry-0.jhipster-registry.discovery.svc.cluster.local:8761/eureka/,http://admin:${spring.security.user.password}@jhipster-registry-1.jhipster-registry.discovery.svc.cluster.local:8761/eureka/     
+          defaultZone: http://admin:${spring.security.user.password}@jhipster-registry.discovery:8761/eureka/
