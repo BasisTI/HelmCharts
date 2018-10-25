@@ -1,0 +1,85 @@
+auth:
+    registryPassword: "mudar123"
+
+spring:
+  cloudConfigURI: "http://admin:${jhipster.registry.password}@jhipster-registry.discovery:8761/config"
+  
+eureka:
+  clientDefaultURL: "http://admin:${jhipster.registry.password}@jhipster-registry.discovery:8761/eureka/"
+
+cliente:
+  name: cliente
+  image:
+    repository: ibama-registry.basis.com.br/sisfogo2/cliente
+    tag: teste
+  replicaCount: 1
+  ingress:
+    enabled: true
+    url: "sisfogo2.tst.basis.com.br"
+  service:
+    servicePort: 80
+
+gateway:
+  port: 8080
+  name: gateway
+  image:
+    repository: ibama-registry.basis.com.br/sisfogo2/gateway
+    tag: teste
+  replicaCount: 1
+  spring:
+    profileActive: "prod,swagger"
+
+capacitacao:
+  port: 8082
+  enable: true
+  name: capacitacao
+  image:
+    repository: ibama-registry.basis.com.br/sisfogo2/capacitacao
+    tag: teste
+  replicaCount: 1
+  spring:
+    profileActive: "prod,swagger"
+
+contratacao:
+  port: 8081
+  enable: true
+  name: contratacao
+  image:
+    repository: ibama-registry.basis.com.br/sisfogo2/contratacao
+    tag: teste
+  replicaCount: 1
+  spring:
+    profileActive: "prod,swagger"
+
+ocorrenciaincendios:
+  port: 8083
+  enable: true
+  name: ocorrenciaincendios
+  image:
+    repository: ibama-registry.basis.com.br/sisfogo2/ocorrenciaincendios
+    tag: teste
+  replicaCount: 1
+  spring:
+    profileActive: "prod,swagger"    
+
+configucacao:
+  port: 8084
+  enable: true
+  name: configuracao
+  image:
+    repository: ibama-registry.basis.com.br/sisfogo2/configuracao
+    tag: teste
+  replicaCount: 1
+  spring:
+    profileActive: "prod,swagger"
+
+treinamento:
+  port: 8085
+  enable: true
+  name: treinamento
+  image:
+    repository: ibama-registry.basis.com.br/sisfogo2/treinamento
+    tag: teste
+  replicaCount: 1
+  spring:
+    profileActive: "prod,swagger"
