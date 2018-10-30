@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "redis.fullname" . }}
+  name: {{ template "redis.name" . }}
   labels:
     app: redis
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -11,14 +11,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ template "redis.fullname" . }}
+      app: {{ template "redis.name" . }}
   template:
     metadata:
       labels:
-        app: {{ template "redis.fullname" . }}
+        app: {{ template "redis.name" . }}
     spec:
       containers:
-      - name: {{ template "redis.fullname" . }}
+      - name: {{ template "redis.name" . }}
         image: "{{ .Values.redis.image.repository }}:{{ .Values.redis.image.tag }}"
         ports:
         - name: http
