@@ -1,0 +1,55 @@
+secret:
+  name: registry-secret
+  auth:
+    registryAdminPassword: Reg2018BASIS
+
+jhipster:
+  name: jhipster-registry
+  port: 8761
+  replicaCount: 2
+  image: jhipster/jhipster-registry:v4.0.0
+
+service:
+  name: jhipster-registry
+  port: 8761
+
+ingress:
+  name: jhipster-registry
+  host: jhipster-registry.basis.com.br
+  path: /
+  serviceName: jhipster-registry
+  servicePort: 8761
+
+configmap:
+  name: jhipster-registry
+  application:
+    spring:
+      profilesActive: prod,swagger,k8s
+    eureka:
+      client:
+        initialInstanceInfoReplicationIntervalSeconds: 15
+        instanceInfoReplicationIntervalSeconds: 15
+        registryFetchIntervalSeconds: 15
+        fetchRegistry: true
+        registerWithEureka: true
+        eurekaServiceUrlPollIntervalSeconds: 15
+      server:
+        peerEurekaNodesUpdateIntervalMs: 15000
+        renewalThresholdUpdateIntervalMs: 15000
+        peerNodeConnectTimeoutMs: 2000
+        enableSelfPreservation: false
+        registrySyncRetries: 3
+        composite0Type: native
+        composite0SearchLocations: file:./central-config
+        peerNodeReadTimeoutMs: 600
+      instance:
+        leaseRenewalIntervalInSeconds: 15
+        leaseExpirationDurationInSeconds: 30
+        registryDefaultOpenForTrafficCount: 0
+    jhipster:
+      securityAuthenticationJWTSecret: change_it
+  jhipster:
+    eureka:
+      client:
+        serviceurl:
+          defaultZone: http://admin:${spring.security.user.password}@jhipster-registry.discovery:8761/eureka/

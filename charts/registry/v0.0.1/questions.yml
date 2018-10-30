@@ -4,35 +4,35 @@ questions:
 #### Hostname  
 - variable: ingress.host
   group: Configurações adicionais
-  default: jhipster-registry.basis.com.br
+  default: "jhipster-registry.basis.com.br"
   description: "Insira o hostname para acessar a Registry"
   label: Hostname JHipster Registry
   type: string
 ### Senha do JHipster
 - variable: secret.auth.registryAdminPassword
   group: Configurações adicionais
-  default: Reg2018BASIS
+  default: "Reg2018BASIS"
   description: "Senha admin da Registry"
   label: Senha JHipster Registry
-  type: string   
+  type: password   
 #### Serviço
 - variable: service.name
   group: Configurações adicionais
-  default: jhipster-registry
+  default: "jhipster-registry"
   description: "Insira o nome do serviço (kubedns)"
   label: Serviço JHipster Registry
   type: string
 #### Imagem
 - variable: jhipster.image
   group: Configurações adicionais
-  default: jhipster/jhipster-registry:v4.0.0
+  default: "jhipster/jhipster-registry:v4.0.0"
   description: "Nome da imagem do JHipster Registry"
   label: Imagem do JHipster
   type: string
 #### JWT
-- variable: configmap.application.jhipster
+- variable: configmap.application.jhipster.securityAuthenticationJWTSecret
   group: Configurações adicionais
-  default: change_it
+  default: "change_it"
   description: "Insira um token JWT (kubedns)"
   label: JWT Token
   type: string 
