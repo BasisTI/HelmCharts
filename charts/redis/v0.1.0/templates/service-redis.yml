@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-sisfogo2
+  name: {{ template "redis.fullname" . }}
   labels:
     app: redis
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -9,7 +9,7 @@ metadata:
     heritage: "{{ .Release.Service }}"
 spec:
   selector:
-    app: {{ template "sisfogo2.name" . }}
+    app: {{ template "redis.fullname" . }}
   type: ClusterIP
   ports:
   - name: redis
