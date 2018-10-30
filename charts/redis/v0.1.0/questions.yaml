@@ -1,151 +1,151 @@
-categories:
-- application
-questions:
-### URL Cliente ###
-- variable: cliente.ingress.url
-  group: "URL da Aplicação"
-  default: "sisfogo2.tst.basis.com.br"
-  description: "Insira a URL que sera utilizada para acessar a aplicação SISFOGO2."
-  label: URL do SISFOGO2
-  type: string
-### JHipster Registry ###
-- variable: auth.registryPassword
-  group: "Jhipster Registry"
-  default: "mudar123"
-  description: "Informe a senha do JHipster Registry"
-  label: Senha do JHipster Registry
-  type: password 
-### Imagens ####
-- variable: alteraImagem
-  group: "Imagens dos Containers"
-  description: "Deseja alterar as imagens e tags dos serviços?"
-  label: Alterar imagens e tags
-  default: false
-  type: boolean
-  required: true
-  show_subquestion_if: true
-  subquestions:
-  - variable: cliente.image.repository
-    description: "Imagem do serviço Cliente. ex: sisfogo2/cliente, registry.dominio.com./sisfogo2/cliente, sisfogo2/frontend"
-    label: Imagem do Cliente
-    default: "ibama-registry.basis.com.br/sisfogo2/cliente"
-    type: string
-  - variable: cliente.image.tag
-    default: "teste"
-    description: "Tag da imagem do serviço Cliente."
-    type: string
-    label: Tag da imagem do Cliente
+# categories:
+# - application
+# questions:
+# ### URL Cliente ###
+# - variable: cliente.ingress.url
+#   group: "URL da Aplicação"
+#   default: "sisfogo2.tst.basis.com.br"
+#   description: "Insira a URL que sera utilizada para acessar a aplicação SISFOGO2."
+#   label: URL do SISFOGO2
+#   type: string
+# ### JHipster Registry ###
+# - variable: auth.registryPassword
+#   group: "Jhipster Registry"
+#   default: "mudar123"
+#   description: "Informe a senha do JHipster Registry"
+#   label: Senha do JHipster Registry
+#   type: password 
+# ### Imagens ####
+# - variable: alteraImagem
+#   group: "Imagens dos Containers"
+#   description: "Deseja alterar as imagens e tags dos serviços?"
+#   label: Alterar imagens e tags
+#   default: false
+#   type: boolean
+#   required: true
+#   show_subquestion_if: true
+#   subquestions:
+#   - variable: cliente.image.repository
+#     description: "Imagem do serviço Cliente. ex: sisfogo2/cliente, registry.dominio.com./sisfogo2/cliente, sisfogo2/frontend"
+#     label: Imagem do Cliente
+#     default: "ibama-registry.basis.com.br/sisfogo2/cliente"
+#     type: string
+#   - variable: cliente.image.tag
+#     default: "teste"
+#     description: "Tag da imagem do serviço Cliente."
+#     type: string
+#     label: Tag da imagem do Cliente
 
-  - variable: gateway.image.repository
-    description: "Imagem do serviço Gateway. ex: sisfogo2/gateway, registry.dominio.com./sisfogo2/gateway"
-    label: Imagem do Gateway
-    default: "ibama-registry.basis.com.br/sisfogo2/gateway"
-    type: string
-  - variable: gateway.image.tag
-    default: "teste"
-    description: "Tag da imagem do serviço Gateway."
-    type: string
-    label: Tag da imagem do Gateway
+#   - variable: gateway.image.repository
+#     description: "Imagem do serviço Gateway. ex: sisfogo2/gateway, registry.dominio.com./sisfogo2/gateway"
+#     label: Imagem do Gateway
+#     default: "ibama-registry.basis.com.br/sisfogo2/gateway"
+#     type: string
+#   - variable: gateway.image.tag
+#     default: "teste"
+#     description: "Tag da imagem do serviço Gateway."
+#     type: string
+#     label: Tag da imagem do Gateway
 
-  - variable: capacitacao.image.repository
-    description: "Imagem do serviço Capacitacao. ex: sisfogo2/capacitacao, registry.dominio.com./sisfogo2/capacitacao"
-    label: Imagem do Capacitacao
-    default: "ibama-registry.basis.com.br/sisfogo2/capacitacao"
-    type: string
-  - variable: capacitacao.image.tag
-    default: "teste"
-    description: "Tag da imagem do serviço Capacitacao."
-    type: string
-    label: Tag da imagem do Capacitacao
+#   - variable: capacitacao.image.repository
+#     description: "Imagem do serviço Capacitacao. ex: sisfogo2/capacitacao, registry.dominio.com./sisfogo2/capacitacao"
+#     label: Imagem do Capacitacao
+#     default: "ibama-registry.basis.com.br/sisfogo2/capacitacao"
+#     type: string
+#   - variable: capacitacao.image.tag
+#     default: "teste"
+#     description: "Tag da imagem do serviço Capacitacao."
+#     type: string
+#     label: Tag da imagem do Capacitacao
 
-  - variable: contratacao.image.repository
-    description: "Imagem do serviço Contratacao. ex: sisfogo2/contratacao, registry.dominio.com./sisfogo2/contratacao"
-    label: Imagem do Contratacao
-    default: "ibama-registry.basis.com.br/sisfogo2/contratacao"
-    type: string
-  - variable: contratacao.image.tag
-    default: "teste"
-    description: "Tag da imagem do serviço Contratacao."
-    type: string
-    label: Tag da imagem do Contratacao
+#   - variable: contratacao.image.repository
+#     description: "Imagem do serviço Contratacao. ex: sisfogo2/contratacao, registry.dominio.com./sisfogo2/contratacao"
+#     label: Imagem do Contratacao
+#     default: "ibama-registry.basis.com.br/sisfogo2/contratacao"
+#     type: string
+#   - variable: contratacao.image.tag
+#     default: "teste"
+#     description: "Tag da imagem do serviço Contratacao."
+#     type: string
+#     label: Tag da imagem do Contratacao
 
-  - variable: ocorrenciaincendios.image.repository
-    description: "Imagem do serviço Ocorrencia Incendios. ex: sisfogo2/ocorrenciaincendios, registry.dominio.com./sisfogo2/ocorrenciaincendios"
-    label: Imagem do Ocorrencia Incendios
-    default: "ibama-registry.basis.com.br/sisfogo2/ocorrenciaincendios"
-    type: string
-  - variable: ocorrenciaincendios.image.tag
-    default: "teste"
-    description: "Tag da imagem do serviço Ocorrencia Incendios."
-    type: string
-    label: Tag da imagem do Ocorrencia Incendios
+#   - variable: ocorrenciaincendios.image.repository
+#     description: "Imagem do serviço Ocorrencia Incendios. ex: sisfogo2/ocorrenciaincendios, registry.dominio.com./sisfogo2/ocorrenciaincendios"
+#     label: Imagem do Ocorrencia Incendios
+#     default: "ibama-registry.basis.com.br/sisfogo2/ocorrenciaincendios"
+#     type: string
+#   - variable: ocorrenciaincendios.image.tag
+#     default: "teste"
+#     description: "Tag da imagem do serviço Ocorrencia Incendios."
+#     type: string
+#     label: Tag da imagem do Ocorrencia Incendios
 
-  - variable: configuracao.image.repository
-    description: "Imagem do serviço Configuracao. ex: sisfogo2/configuracao, registry.dominio.com./sisfogo2/configuracao"
-    label: Imagem do Configuracao
-    default: "ibama-registry.basis.com.br/sisfogo2/configuracao"
-    type: string
-  - variable: configuracao.image.tag
-    default: "teste"
-    description: "Tag da imagem do serviço Configuracao."
-    type: string
-    label: Tag da imagem do Configuracao
+#   - variable: configuracao.image.repository
+#     description: "Imagem do serviço Configuracao. ex: sisfogo2/configuracao, registry.dominio.com./sisfogo2/configuracao"
+#     label: Imagem do Configuracao
+#     default: "ibama-registry.basis.com.br/sisfogo2/configuracao"
+#     type: string
+#   - variable: configuracao.image.tag
+#     default: "teste"
+#     description: "Tag da imagem do serviço Configuracao."
+#     type: string
+#     label: Tag da imagem do Configuracao
 
-  - variable: treinamento.image.repository
-    description: "Imagem do serviço Treinamento. ex: sisfogo2/treinamento, registry.dominio.com./sisfogo2/treinamento"
-    label: Imagem do Configuracao
-    default: "ibama-registry.basis.com.br/sisfogo2/treinamento"
-    type: string
-  - variable: treinamento.image.tag
-    default: "teste"
-    description: "Tag da imagem do serviço Treinamento."
-    type: string
-    label: Tag da imagem do Treinamento
+#   - variable: treinamento.image.repository
+#     description: "Imagem do serviço Treinamento. ex: sisfogo2/treinamento, registry.dominio.com./sisfogo2/treinamento"
+#     label: Imagem do Configuracao
+#     default: "ibama-registry.basis.com.br/sisfogo2/treinamento"
+#     type: string
+#   - variable: treinamento.image.tag
+#     default: "teste"
+#     description: "Tag da imagem do serviço Treinamento."
+#     type: string
+#     label: Tag da imagem do Treinamento
 
-### Gateway ###
-- variable: gateway.spring.profileActive
-  group: "Configurações do Gateway"
-  description: "Informe o spring profile do Gateway. obs: coloque \\(barra invertida) antes de cada vírgulas"
-  label: Spring Profile
-  default: "prod\\,swagger"
-  type: string
+# ### Gateway ###
+# - variable: gateway.spring.profileActive
+#   group: "Configurações do Gateway"
+#   description: "Informe o spring profile do Gateway. obs: coloque \\(barra invertida) antes de cada vírgulas"
+#   label: Spring Profile
+#   default: "prod\\,swagger"
+#   type: string
 
-#### Capacitacao ###
-- variable: capacitacao.spring.profileActive
-  group: "Configurações do Capacitacao"
-  description: "Informe o spring profile do Capacitacao. obs: coloque \\(barra invertida) antes de cada vírgulas"
-  label: Spring Profile
-  default: "prod\\,swagger"
-  type: string
+# #### Capacitacao ###
+# - variable: capacitacao.spring.profileActive
+#   group: "Configurações do Capacitacao"
+#   description: "Informe o spring profile do Capacitacao. obs: coloque \\(barra invertida) antes de cada vírgulas"
+#   label: Spring Profile
+#   default: "prod\\,swagger"
+#   type: string
 
-#### Contratacao ###
-- variable: contratacao.spring.profileActive
-  group: "Configurações do Contratacao"
-  description: "Informe o spring profile do Contratacao. obs: coloque \\(barra invertida) antes de cada vírgulas"
-  label: Spring Profile
-  default: "prod\\,swagger"
-  type: string
+# #### Contratacao ###
+# - variable: contratacao.spring.profileActive
+#   group: "Configurações do Contratacao"
+#   description: "Informe o spring profile do Contratacao. obs: coloque \\(barra invertida) antes de cada vírgulas"
+#   label: Spring Profile
+#   default: "prod\\,swagger"
+#   type: string
 
-#### Ocorrencia Incendios ###
-- variable: ocorrenciaincendios.spring.profileActive
-  group: "Configurações do Ocorrencia Incendios"
-  description: "Informe o spring profile do Ocorrencia Incendios. obs: coloque \\(barra invertida) antes de cada vírgulas"
-  label: Spring Profile
-  default: "prod\\,swagger"
-  type: string
+# #### Ocorrencia Incendios ###
+# - variable: ocorrenciaincendios.spring.profileActive
+#   group: "Configurações do Ocorrencia Incendios"
+#   description: "Informe o spring profile do Ocorrencia Incendios. obs: coloque \\(barra invertida) antes de cada vírgulas"
+#   label: Spring Profile
+#   default: "prod\\,swagger"
+#   type: string
 
-#### Configuracao ###
-- variable: configuracao.spring.profileActive
-  group: "Configurações do Configuracao"
-  description: "Informe o spring profile do Configuracao. obs: coloque \\(barra invertida) antes de cada vírgulas"
-  label: Spring Profile
-  default: "prod\\,swagger"
-  type: string
+# #### Configuracao ###
+# - variable: configuracao.spring.profileActive
+#   group: "Configurações do Configuracao"
+#   description: "Informe o spring profile do Configuracao. obs: coloque \\(barra invertida) antes de cada vírgulas"
+#   label: Spring Profile
+#   default: "prod\\,swagger"
+#   type: string
 
-#### Treinamento ###
-- variable: treinamento.spring.profileActive
-  group: "Configurações do Treinamento"
-  description: "Informe o spring profile do Treinamento. obs: coloque \\(barra invertida) antes de cada vírgulas"
-  label: Spring Profile
-  default: "prod\\,swagger"
-  type: string
+# #### Treinamento ###
+# - variable: treinamento.spring.profileActive
+#   group: "Configurações do Treinamento"
+#   description: "Informe o spring profile do Treinamento. obs: coloque \\(barra invertida) antes de cada vírgulas"
+#   label: Spring Profile
+#   default: "prod\\,swagger"
+#   type: string

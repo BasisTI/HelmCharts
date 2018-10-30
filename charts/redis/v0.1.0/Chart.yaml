@@ -1,18 +1,12 @@
-name: sisfogo2
+name: redis
 version: 0.0.1
 appVersion: 0.0.1
-description: Sisfogo2.
+description: redis.
 keywords:
-- Sisfogo2
-- capacitacao
-- contratacao
-- ocorrenciaincendios
-- configuracao
-- treinamento
+- redis
+
 home: 
-icon: https://www.ibama.gov.br/images/noticias/2016/logo_quadrado.jpg
-sources:
-- https://gogs.basis.com.br/IBAMA/sisfogo2_codigo_fonte.git
+icon: https://cdn-images-1.medium.com/max/1600/1*ngGAAMf8Sw4jCJ_nP2Qt5A.png
 maintainers:
 - name: Basis
   email: basis@basis.com.br
